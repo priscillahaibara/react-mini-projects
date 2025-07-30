@@ -1,9 +1,17 @@
+import { useState } from "react";
+
 export default function App() {
+  const [tasks, setTasks] = useState([])
+
+  function handleAddTasks(task) {
+    setTasks([...tasks, task])
+  }
+  
   return (
     <>
       <Header />
-      <Input />
-      <TaskList />
+      <Input onAddTasks={handleAddTasks}/>
+      <TaskList tasks={tasks}/>
       <Footer />
     </>
   );
@@ -17,24 +25,39 @@ function Header() {
   );
 }
 
-function Input() {
+function Input({ onAddTasks }) {
+  const [input, setInput] = useState('');
+  
+  function handleClick() {
+    if (input.trim() === '') return;
+
+    onAddTasks(input);
+    setInput('');
+  }
+
   return (
     <div className="input-container">
       <input
         type="text"
         placeholder="Add your task..."
         className="task-input"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
       ></input>
-      <button className="add-button">Add</button>
+      <button className="add-button" onClick={handleClick}>Add</button>
     </div>
   );
 }
 
-function TaskList() {
+function TaskList({ tasks }) {
   return(
     <div className="results-container">
-      <ul>
-
+      <ul className="list-container">
+        {tasks.map((task, index) => (
+          <li key={index} className="list-item">{task} 
+          <button className="button-delete">❌</button>
+          </li>
+        ))}
       </ul>
     </div>
   )

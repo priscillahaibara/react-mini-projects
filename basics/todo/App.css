@@ -24,7 +24,6 @@
 }
 
 .add-button {
-  all: unset;
   background-color: orange;
   border-radius: 15px;
   padding: 0.8rem;
@@ -38,7 +37,28 @@
 
 .results-container {
   height: 65vh;
-  background-color: #f5f5f5;
+  background-color: white;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.list-item {
+  background-color: cornsilk;
+  margin: 1.5rem;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  font-size: 1.6rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+}
+
+.button-delete {
+  margin-left: 12px;
+  cursor: pointer;
 }
 
 .footer {
