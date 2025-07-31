@@ -1,17 +1,22 @@
 import { useState } from "react";
 
 export default function App() {
-  const [tasks, setTasks] = useState([])
+  const [tasks, setTasks] = useState([]);
 
-  function handleAddTasks(task) {
-    setTasks([...tasks, task])
+  function handleAddTask(task) {
+    setTasks([...tasks, task]);
   }
-  
+
+  function handleDeleteTask(taskToDelete) {
+    const filteredTask = tasks.filter((task) => task.id !== taskToDelete);
+    setTasks(filteredTask)
+  }
+
   return (
     <>
       <Header />
-      <Input onAddTasks={handleAddTasks}/>
-      <TaskList tasks={tasks}/>
+      <Input onAddTask={handleAddTask} />
+      <TaskList tasks={tasks} onDeleteTask={handleDeleteTask}/>
       <Footer />
     </>
   );
@@ -26,13 +31,15 @@ function Header() {
 }
 
 function Input({ onAddTasks }) {
-  const [input, setInput] = useState('');
-  
-  function handleClick() {
-    if (input.trim() === '') return;
+  const [input, setInput] = useState("");
 
-    onAddTasks(input);
-    setInput('');
+  function handleClick() {
+    if (input.trim() === "") return;
+
+    const newTask = { description: input, completed: false, id: Date.now() };
+
+    onAddTasks(newTask);
+    setInput("");
   }
 
   return (
@@ -44,29 +51,33 @@ function Input({ onAddTasks }) {
         value={input}
         onChange={(e) => setInput(e.target.value)}
       ></input>
-      <button className="add-button" onClick={handleClick}>Add</button>
+      <button className="add-button" onClick={handleClick}>
+        Add
+      </button>
     </div>
   );
 }
 
-function TaskList({ tasks }) {
-  return(
+function TaskList({ tasks, onDeleteTask }) {
+  return (
     <div className="results-container">
       <ul className="list-container">
-        {tasks.map((task, index) => (
-          <li key={index} className="list-item">{task} 
-          <button className="button-delete">❌</button>
+        {tasks.map((task) => (
+          <li key={task.id} className="list-item">
+            {task.description}
+            <button
+              className="button-delete"
+              onClick={() => onDeleteTask(task.id)}
+            >
+              ❌
+            </button>
           </li>
         ))}
       </ul>
     </div>
-  )
+  );
 }
 
 function Footer() {
-  return(
-    <div className="footer">
-      You have completed X tasks
-    </div>
-  )
+  return <div className="footer">You have completed X tasks</div>;
 }
