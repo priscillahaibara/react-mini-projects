@@ -12,17 +12,23 @@ export default function App() {
   }
 
   function handleDeleteTask(taskToDelete) {
-    const filteredTask = tasks.filter((task) => task.id !== taskToDelete);
-    setTasks(filteredTask)
+    const filteredTasks = tasks.filter((task) => task.id !== taskToDelete);
+    setTasks(filteredTasks)
+  }
+
+  function toggleTaskCompleted(taskCompleted) {
+    const updateTasks = tasks.map((task) => task.id === taskCompleted ? {...task, completed: !task.completed} : task);
+    setTasks(updateTasks);
   }
 
   return (
     <>
       <Header />
       <Input onAddTask={handleAddTask} />
-      <TaskList tasks={tasks} onDeleteTask={handleDeleteTask}/>
+      <TaskList tasks={tasks} onDeleteTask={handleDeleteTask} onTaskCompleted={toggleTaskCompleted}/>
       <Footer />
     </>
   );
 }
+
 

@@ -54,11 +54,22 @@
   border-radius: 12px;
   font-size: 1.6rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+  display: flex;
+  align-items: center;
+}
+
+.list-item input {
+  cursor: pointer;
+  margin-right: 1rem;
 }
 
 .button-delete {
-  margin-left: 12px;
   cursor: pointer;
+  margin-left: 1.5rem;
+}
+
+.task-completed {
+  text-decoration: line-through;
 }
 
 .footer {
