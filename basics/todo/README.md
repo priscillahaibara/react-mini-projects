@@ -21,6 +21,10 @@ This is a small learning project: a simple and functional **to-do list app** bui
 - Basic UX considerations (e.g., keeping UI reactive and intuitive)
 
 ## 🖼️ Preview
+
 <p align="center">
-<img width="600" height="600" alt="image" src="./todo/screenshot.jpg" />
-<p/>
+  <img width="600" alt="Counter App Preview" src="https://github.com/user-attachments/assets/5052e251-9cce-458b-9e6f-fa1f9f341cd1" />
+</p>
+
+
+
