@@ -6,6 +6,7 @@ import Footer from "./components/Footer.js";
 
 export default function App() {
   const [tasks, setTasks] = useState([]);
+  const completedCount = tasks.filter((task) => task.completed).length;
 
   function handleAddTask(task) {
     setTasks([...tasks, task]);
@@ -17,8 +18,8 @@ export default function App() {
   }
 
   function toggleTaskCompleted(taskCompleted) {
-    const updateTasks = tasks.map((task) => task.id === taskCompleted ? {...task, completed: !task.completed} : task);
-    setTasks(updateTasks);
+    const updatedTasks = tasks.map((task) => task.id === taskCompleted ? {...task, completed: !task.completed} : task);
+    setTasks(updatedTasks);
   }
 
   return (
@@ -26,7 +27,7 @@ export default function App() {
       <Header />
       <Input onAddTask={handleAddTask} />
       <TaskList tasks={tasks} onDeleteTask={handleDeleteTask} onTaskCompleted={toggleTaskCompleted}/>
-      <Footer />
+      <Footer completedCount={completedCount}/>
     </>
   );
 }
