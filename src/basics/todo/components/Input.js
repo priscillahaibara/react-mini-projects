@@ -1,3 +1,4 @@
+import styles from '../App.module.css';
 import { useState } from "react";
 
 export default function Input({ onAddTask }) {
@@ -13,7 +14,7 @@ export default function Input({ onAddTask }) {
   }
 
   return (
-    <div className="input-container">
+    <div className={styles.inputContainer}>
       <input
         type="text"
         placeholder="Add your task..."
@@ -21,7 +22,7 @@ export default function Input({ onAddTask }) {
         value={input}
         onChange={(e) => setInput(e.target.value)}
       ></input>
-      <button className="add-button" onClick={handleClick}>
+      <button className={styles.addButton} onClick={handleClick}>
         Add
       </button>
     </div>

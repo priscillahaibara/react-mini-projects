@@ -4,7 +4,7 @@ import Input from "./components/Input.js";
 import TaskList from "./components/TaskList.js";
 import Footer from "./components/Footer.js";
 
-export default function App() {
+export default function Todo() {
   const [tasks, setTasks] = useState([]);
   const completedCount = tasks.filter((task) => task.completed).length;
 

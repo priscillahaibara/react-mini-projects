@@ -1,13 +1,15 @@
+import styles from '../App.module.css';
+
 export default function TaskList({ tasks, onDeleteTask, onTaskCompleted }) {
   return (
-    <div className="results-container">
-      <ul className="list-container">
+    <div className={styles.resultsContainer}>
+      <ul className={styles.listContainer}>
         {tasks.map((task) => (
-          <li key={task.id} className="list-item">
+          <li key={task.id} className={styles.listItem}>
             <input type="checkbox" onChange={() => onTaskCompleted(task.id)} />
-            <span className={task.completed ? 'task-completed' : ''}>{task.description}</span>
+            <span className={task.completed ? 'taskCompleted' : ''}>{task.description}</span>
             <button
-              className="button-delete"
+              className={styles.buttonDelete}
               onClick={() => onDeleteTask(task.id)}
             >
               ❌

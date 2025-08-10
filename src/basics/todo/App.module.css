@@ -3,10 +3,11 @@
   justify-content: center;
   align-items: center;
   height: 15vh;
+  font-size: 2rem;
   background-color: orange;
 }
 
-.input-container {
+.inputContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +16,7 @@
   background-color: khaki;
 }
 
-.task-input {
+.taskInput {
   all: unset;
   background-color: white;
   border-radius: 15px;
@@ -23,7 +24,7 @@
   font-size: 1.6rem;
 }
 
-.add-button {
+.addButton {
   background-color: orange;
   border-radius: 15px;
   padding: 0.8rem;
@@ -31,23 +32,23 @@
   cursor: pointer;
 }
 
-.add-button:hover {
+.addButton:hover {
   background-color: darkorange;
 }
 
-.results-container {
+.resultsContainer {
   height: 65vh;
   background-color: white;
 }
 
-.list-container {
+.listContainer {
   display: flex;
   flex-direction: row;
   max-width: 60rem;
   margin: 0 auto;
 }
 
-.list-item {
+.listItem {
   background-color: cornsilk;
   margin: 1.5rem;
   padding: 1.5rem 2rem;
@@ -58,17 +59,17 @@
   align-items: center;
 }
 
-.list-item input {
+.listItem input {
   cursor: pointer;
   margin-right: 1rem;
 }
 
-.button-delete {
+.buttonDelete {
   cursor: pointer;
   margin-left: 1.5rem;
 }
 
-.task-completed {
+.taskCompleted {
   text-decoration: line-through;
 }
 
