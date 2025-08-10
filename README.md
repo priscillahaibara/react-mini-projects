@@ -1,5 +1,7 @@
 # ⚛️ React Mini Projects
-This repository contains small projects made with React, mainly for learning purposes. Each folder is a self-contained project exploring different core concepts of React.
+This repository contains small projects made with React, mainly for learning purposes.  
+Each project can be accessed directly via the links below in the **Finished Projects** section.  
+For more details, feel free to explore the respective README.md files and source code located inside the `src` subfolders of each project.
 
 ## ✅ Finished Projects
 - [Home](https://priscillahaibara.github.io/react-mini-projects/#/)
