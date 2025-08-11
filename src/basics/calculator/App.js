@@ -1,26 +1,36 @@
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+
+const buttons = [
+  { label: "7", type: "number" },
+  { label: "8", type: "number" },
+  { label: "9", type: "number" },
+  { label: "*", type: "operator" },
+  { label: "4", type: "number" },
+  { label: "5", type: "number" },
+  { label: "6", type: "number" },
+  { label: "-", type: "operator" },
+  { label: "1", type: "number" },
+  { label: "2", type: "number" },
+  { label: "3", type: "number" },
+  { label: "+", type: "operator" },
+  { label: "0", type: "number" },
+  { label: "/", type: "operator" },
+  { label: "C", type: "action" },
+  { label: "=", type: "action" },
+];
 
 export default function Calculator() {
+  const [input, setInput] = useState("");
+
   return (
     <div className="mainContainer">
       <div className="calculatorContainer">
-        <div className="display">0</div>
-        <button className="button">7</button>
-        <button className="button">8</button>
-        <button className="button">9</button>
-        <button className="button">*</button>
-        <button className="button">4</button>
-        <button className="button">5</button>
-        <button className="button">6</button>
-        <button className="button">-</button>
-        <button className="button">1</button>
-        <button className="button">2</button>
-        <button className="button">3</button>
-        <button className="button">+</button>
-        <button className="button">0</button>
-        <button className="button">/</button>
-        <button className="button">C</button>
-        <button className="button">=</button>
+        <div className="display">{input || 0}</div>
+
+        { buttons.map((button) => (
+            <button className="button" key={button.label}>{button.label}</button>
+        ))}
       </div>
     </div>
   );
