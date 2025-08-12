@@ -25,12 +25,31 @@ export default function Calculator() {
   const [input, setInput] = useState("");
 
   function selectButton(label) {
-    setInput((prev) => prev + label);
 
     if (label === 'C') {
       setInput('')
       return;
     }
+
+    if (label === '=') {
+      try {
+        const result = evaluate(input);
+        setInput(result.toString());
+        return;
+
+      } catch (error) {
+        setInput('Error');
+        return;
+      }
+    }
+
+    setInput((prev) => {
+      if (prev === 'Error') {
+        return label;
+      } else {
+        return prev + label;
+      }
+    });
   }
 
   return (
