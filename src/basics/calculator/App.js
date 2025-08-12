@@ -23,13 +23,23 @@ const buttons = [
 export default function Calculator() {
   const [input, setInput] = useState("");
 
+  function selectButton(label) {
+    setInput((prev) => prev + label);
+  }
+
   return (
     <div className="mainContainer">
       <div className="calculatorContainer">
         <div className="display">{input || 0}</div>
 
-        { buttons.map((button) => (
-            <button className="button" key={button.label}>{button.label}</button>
+        {buttons.map((button) => (
+          <button
+            className="button"
+            key={button.label}
+            onClick={() => selectButton(button.label)}
+          >
+            {button.label}
+          </button>
         ))}
       </div>
     </div>
