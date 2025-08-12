@@ -25,6 +25,11 @@ export default function Calculator() {
 
   function selectButton(label) {
     setInput((prev) => prev + label);
+
+    if (label === 'C') {
+      setInput('')
+      return;
+    }
   }
 
   return (
