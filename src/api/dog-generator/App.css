@@ -14,6 +14,11 @@
     object-fit: cover;
 }
 
+.loading {
+    height: 2rem;
+    font-size: 1.4rem;
+}
+
 .button {
     background-color: orange;
     font-size: 1.6rem;
