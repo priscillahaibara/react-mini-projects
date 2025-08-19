@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import './App.css'
 
 export default function DogGenerator() {
   const [img, setImg] = useState(null);
@@ -15,9 +16,9 @@ export default function DogGenerator() {
   };
 
   return (
-    <div>
-      <img src={img} />
-      <button onClick={fetchImg}>Get new dog</button>
+    <div className="main-container">
+      <img className="img" src={img} />
+      <button className="button" onClick={fetchImg}>Get new dog</button>
     </div>
   );
 }

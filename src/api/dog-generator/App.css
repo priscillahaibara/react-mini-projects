@@ -1,0 +1,22 @@
+.main-container {
+    height: 100vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.img {
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+}
+
+.button {
+    background-color: orange;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 1.4rem;
+}
