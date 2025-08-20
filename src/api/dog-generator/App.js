@@ -20,6 +20,8 @@ export default function DogGenerator() {
     }
   };
 
+  useEffect(() => {fetchImg()}, []);
+
   return (
     <div className="main-container">
       <img className="img" alt="Random dog" src={img} />
