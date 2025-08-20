@@ -24,7 +24,7 @@ export default function DogGenerator() {
 
   return (
     <div className="main-container">
-      <img className="img" alt="Random dog" src={img} />
+      {img && <img className="img" alt="Random dog" src={img} />}
       <p className="loading">{loading && "Loading..."}</p>
       <button className="button" onClick={fetchImg}>
         Get new dog
