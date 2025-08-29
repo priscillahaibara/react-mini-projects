@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { evaluate } from "mathjs";
-import "./App.css";
+import styles from './App.module.css';
+import PageNav from "../../components/PageNav";
 
 const buttons = [
   { label: "7", type: "number" },
@@ -53,20 +54,22 @@ export default function Calculator() {
   }
 
   return (
-    <div className="mainContainer">
-      <div className="calculatorContainer">
-        <div className="display">{input || 0}</div>
-
-        {buttons.map((button) => (
-          <button
-            className="button"
-            key={button.label}
-            onClick={() => selectButton(button.label)}
-          >
-            {button.label}
-          </button>
-        ))}
+    <main className={styles.main}>
+      <PageNav />
+      <div className={styles.mainContainer}>
+        <div className={styles.calculatorContainer}>
+          <div className={styles.display}>{input || 0}</div>
+          {buttons.map((button) => (
+            <button
+              className={styles.button}
+              key={button.label}
+              onClick={() => selectButton(button.label)}
+            >
+              {button.label}
+            </button>
+          ))}
+        </div>
       </div>
-    </div>
+    </main>
   );
 }
