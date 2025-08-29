@@ -1,43 +1,6 @@
 import { useState } from "react";
-
-const containerStyle = {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  height: "100vh",
-};
-
-const containerDisplayStyle = {
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
-  backgroundColor: "lightblue",
-  height: "25rem",
-  width: "25rem",
-  borderRadius: "20px",
-};
-
-const counterDisplayStyle = {
-  fontFamily: "sans-serif",
-  fontSize: "8rem",
-  marginBottom: "1rem",
-};
-
-const containerButtonsStyle = {
-  display: "flex",
-  gap: "1rem",
-};
-
-const buttonStyle = {
-  backgroundColor: "#f5f5f5",
-  border: "none",
-  borderRadius: "10px",
-  padding: "10px",
-  cursor: "pointer",
-  fontSize: "1rem",
-  textAlign: "center",
-};
+import PageNav from "../../components/PageNav";
+import styles from './App.module.css';
 
 export default function Counter() {
   const [count, setCount] = useState(0);
@@ -53,21 +16,25 @@ export default function Counter() {
   }
 
   return (
-    <div style={containerStyle}>
-      <div style={containerDisplayStyle}>
-        <span style={counterDisplayStyle}>{count}</span>
-        <div style={containerButtonsStyle}>
-          <button style={buttonStyle} onClick={() => setCount((c) => c + 1)}>
-            ➕
-          </button>
-          <button style={buttonStyle} onClick={handleReset}>
-            Reset
-          </button>
-          <button style={buttonStyle} onClick={handleDecrease}>
-            ➖
-          </button>
+    <main className={styles.main}>
+      <PageNav />
+      <div className={styles.container}>
+        <h1>Counter</h1>
+        <div className={styles.containerDisplay}>
+          <span className={styles.counterDisplay}>{count}</span>
+          <div className={styles.containerButtons}>
+            <button className={styles.button} onClick={() => setCount((c) => c + 1)}>
+              ➕
+            </button>
+            <button className={styles.button} onClick={handleReset}>
+              Reset
+            </button>
+            <button className={styles.button} onClick={handleDecrease}>
+              ➖
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
