@@ -11,10 +11,10 @@ function PageNav() {
           <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <NavLink>About</NavLink>
+          <NavLink to='/about'>About</NavLink>
         </li>
         <li>
-          <NavLink>Contact</NavLink>
+          <NavLink to='/contact'>Contact</NavLink>
         </li>
         <li>
           <NavLink to='/projects' className={styles.ctaLink}>Projects</NavLink>
