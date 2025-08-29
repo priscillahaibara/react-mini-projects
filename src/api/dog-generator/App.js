@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import "./App.css";
+import styles from './App.module.css'
+import PageNav from "../../components/PageNav";
 
 export default function DogGenerator() {
   const [img, setImg] = useState(null);
@@ -25,13 +26,16 @@ export default function DogGenerator() {
   useEffect(() => {fetchImg()}, []);
 
   return (
-    <div className="main-container">
-      {img && <img className="img" alt="Random dog" src={img} />}
-      {error && <p>{error}</p>}
-      <p className="loading">{loading && "Loading..."}</p>
-      <button className="button" onClick={fetchImg}>
-        Get new dog
-      </button>
-    </div>
+    <main className={styles.main}>
+      <PageNav />
+      <div className={styles.mainContainer}>
+        {img && <img className={styles.img} alt="Random dog" src={img} />}
+        {error && <p>{error}</p>}
+        <p className={styles.loading}>{loading && "Loading..."}</p>
+        <button className={styles.button} onClick={fetchImg}>
+          Get new dog
+        </button>
+      </div>
+    </main>
   );
 }
