@@ -17,6 +17,8 @@
   --color-light--1: #aaa;
   --color-light--2: #ececec;
   --color-light--3: #d6dee0;
+  --color-orange--1: #e39400;
+  --color-orange--2: #e9ac3a;
 }
 
 * {
@@ -53,7 +55,7 @@ button {
 
 .cta:link,
 .cta:visited {
-  background-color: rgb(227, 148, 0);
+  background-color: var(--color-orange--1);
   color: var(--color-dark--1);
   font-weight: 700;
   font-size: 1.6rem;
