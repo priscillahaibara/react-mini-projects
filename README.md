@@ -1,20 +1,23 @@
 # ⚛️ React Mini Projects
-This repository contains small projects made with React, mainly for learning purposes.  
-Each project can be accessed directly via the links below in the **Finished Projects** section.  
-For more details, feel free to explore the respective README.md files and source code located inside the `src` subfolders of each project.
+A collection of small React projects built primarily for learning and practice.  
+All projects are built using **React Router with HashRouter**, allowing direct access via URLs.  
+Explore the respective README.md files and source code inside each project's `src` folder for more details.
 
 ## ✅ Finished Projects
 - [Home](https://priscillahaibara.github.io/react-mini-projects/#/)
+- [Calculator](https://priscillahaibara.github.io/react-mini-projects/#/calculator)
 - [Counter](https://priscillahaibara.github.io/react-mini-projects/#/counter)
+- [Dog-generator](https://priscillahaibara.github.io/react-mini-projects/#/dog-generator)
 - [Todo](https://priscillahaibara.github.io/react-mini-projects/#/todo)
 
 ## 🚧 Work in Progress
-New projects will be added weekly as I continue learning and practicing React.
+New projects are added weekly as I continue learning and practicing React.
 
-## 📚 Topics covered (so far)
-- Building functional React components
-- Passing and using props to customize components
-- Managing state using the useState hook 
-- Handling user input and events (clicks, form submission)
-- Conditional rendering based on state (e.g., task completion)
+## 📚 Topics covered
+- Functional React components and props
+- State management with `useState`
+- Side effects and data fetching with `useEffect`
+- Handling user input and events
+- Conditional rendering
 - Rendering and manipulating lists (mapping, filtering, keys)
+- Client-side routing with React Router / HashRouter
