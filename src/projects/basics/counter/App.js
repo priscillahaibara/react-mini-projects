@@ -1,5 +1,5 @@
 import { useState } from "react";
-import PageNav from "../../components/PageNav";
+import PageNav from "../../../components/PageNav";
 import styles from './App.module.css';
 
 export default function Counter() {

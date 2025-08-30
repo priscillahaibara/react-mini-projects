@@ -1,5 +1,5 @@
 import { useState } from "react";
-import PageNav from "../../components/PageNav.js";
+import PageNav from "../../../components/PageNav.js";
 import Header from "./components/Header.js";
 import Input from "./components/Input.js";
 import TaskList from "./components/TaskList.js";

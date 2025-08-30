@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { evaluate } from "mathjs";
 import styles from './App.module.css';
-import PageNav from "../../components/PageNav";
+import PageNav from "../../../components/PageNav";
 
 const buttons = [
   { label: "7", type: "number" },

@@ -3,10 +3,10 @@ import Homepage from "./pages/Homepage.js";
 import Projects from "./pages/Projects.js";
 import About from "./pages/About.js";
 import Contact from './pages/Contact.js';
-import Calculator from "./basics/calculator/App.js";
-import Counter from "./basics/counter/App.js";
-import DogGenerator from "./api/dog-generator/App.js";
-import Todo from "./basics/todo/App.js";
+import Calculator from "./projects/basics/calculator/App.js";
+import Counter from "./projects/basics/counter/App.js";
+import DogGenerator from "./projects/api/dog-generator/App.js";
+import Todo from "./projects/basics/todo/App.js";
 
 
 export default function App() {

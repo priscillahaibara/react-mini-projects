@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from './App.module.css'
-import PageNav from "../../components/PageNav";
+import PageNav from "../../../components/PageNav";
 
 export default function DogGenerator() {
   const [img, setImg] = useState(null);

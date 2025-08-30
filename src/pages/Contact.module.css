@@ -6,13 +6,11 @@
 }
 
 .section {
+  width: clamp(70rem, 80%, 90rem);
+  margin: 6rem auto auto auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 6rem;
-  margin: 6rem auto auto auto;
-  justify-items: center;
-  align-items: center;
-  width: clamp(70rem, 80%, 90rem);
 }
 
 .section img {
