@@ -64,3 +64,21 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
+
+/*************************************
+ MEDIA QUERIES
+ *************************************/
+
+@media (max-width: 60em) {
+  /* 960px */
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 49em) {
+  /* 784px */
+  html {
+    font-size: 50%;
+  }
+}
