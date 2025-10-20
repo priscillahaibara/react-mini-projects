@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PageNav from "../../../components/PageNav";
-import styles from './App.module.css';
+import styles from "./App.module.css";
 
 export default function Counter() {
   const [count, setCount] = useState(0);
@@ -15,6 +15,10 @@ export default function Counter() {
     }
   }
 
+  function handleIncrease() {
+    setCount((c) => c + 1);
+  }
+
   return (
     <main className={styles.main}>
       <PageNav />
@@ -23,7 +27,10 @@ export default function Counter() {
         <div className={styles.containerDisplay}>
           <span className={styles.counterDisplay}>{count}</span>
           <div className={styles.containerButtons}>
-            <button className={styles.button} onClick={() => setCount((c) => c + 1)}>
+            <button
+              className={styles.button}
+              onClick={handleIncrease}
+            >
               ➕
             </button>
             <button className={styles.button} onClick={handleReset}>
