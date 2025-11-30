@@ -1,12 +1,12 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import Homepage from "./pages/Homepage.js";
-import Projects from "./pages/Projects.js";
-import About from "./pages/About.js";
-import Contact from './pages/Contact.js';
-import Calculator from "./projects/basics/calculator/App.js";
-import Counter from "./projects/basics/counter/App.tsx";
-import DogGenerator from "./projects/api/dog-generator/App.js";
-import Todo from "./projects/basics/todo/App.js";
+import Homepage from "./pages/Homepage";
+import Projects from "./pages/Projects";
+import About from "./pages/About";
+import Contact from './pages/Contact';
+import Calculator from "./projects/basics/calculator/App";
+import Counter from "./projects/basics/counter/App";
+import DogGenerator from "./projects/api/dog-generator/App";
+import Todo from "./projects/basics/todo/App";
 
 
 export default function App() {

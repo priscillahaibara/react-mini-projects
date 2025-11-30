@@ -3,7 +3,7 @@ import PageNav from "../../../components/PageNav";
 import styles from "./App.module.css";
 
 export default function Counter() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState<number>(0);
 
   function handleIncrease() {
     setCount((c) => c + 1);
@@ -42,6 +42,13 @@ export default function Counter() {
     </main>
   );
 }
+
+
+
+
+
+
+
 
 
 

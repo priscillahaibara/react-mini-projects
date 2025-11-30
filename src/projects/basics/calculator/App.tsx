@@ -25,7 +25,7 @@ const buttons = [
 export default function Calculator() {
   const [input, setInput] = useState("");
 
-  function selectButton(label) {
+  function selectButton(label: string) {
 
     if (label === 'C') {
       setInput('')

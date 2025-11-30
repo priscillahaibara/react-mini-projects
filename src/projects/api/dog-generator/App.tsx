@@ -5,7 +5,7 @@ import PageNav from "../../../components/PageNav";
 export default function DogGenerator() {
   const [img, setImg] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   const fetchImg = async function () {
     setLoading(true);
